@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Messages | ShaadiMatch</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+
+        <div class="logo-heart">♥</div>
+
+        <div>
+            <h2>Shaadi<span>Match</span></h2>
+            <small>Find • Connect • Forever</small>
+        </div>
+
+    </a>
+
+    <nav class="nav-links">
+
+        <a href="index.html">Home</a>
+
+        <a href="profiles.html">Find Matches</a>
+
+        <a href="matches.html">Matches</a>
+
+        <a href="about.html">About Us</a>
+
+        <a href="contact.html">Contact Us</a>
+
+    </nav>
+
+    <div class="nav-actions">
+
+        <a href="login.html" class="login-btn">Login</a>
+
+        <a href="dashboard.html" class="register-btn">
+            My Dashboard
+        </a>
+
+    </div>
+
+    <button class="menu-btn" type="button">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+</header>
+
+
+<!-- ================= PAGE HERO ================= -->
+
+<section class="messages-hero">
+
+    <div class="messages-hero-content">
+
+        <span>PRIVATE CONVERSATIONS</span>
+
+        <h1>Messages</h1>
+
+        <p>
+            Connect with your matches and continue meaningful conversations.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================= MESSAGES ================= -->
+
+<main class="messages-page">
+
+    <div class="messages-container">
+
+        <!-- CONTACT LIST -->
+
+        <aside class="chat-sidebar">
+
+            <div class="chat-sidebar-header">
+
+                <div>
+                    <span>YOUR CONNECTIONS</span>
+                    <h2>Messages</h2>
+                </div>
+
+                <div class="chat-online-count">
+                    <i class="fa-solid fa-circle"></i>
+                    Online
+                </div>
+
+            </div>
+
+
+            <div class="chat-search">
+
+                <i class="fa-solid fa-magnifying-glass"></i>
+
+                <input
+                    type="text"
+                    id="chatSearch"
+                    placeholder="Search conversations..."
+                >
+
+            </div>
+
+
+            <div id="chatContacts" class="chat-contacts"></div>
+
+        </aside>
+
+
+        <!-- CHAT AREA -->
+
+        <section class="chat-window">
+
+            <!-- EMPTY -->
+
+            <div id="chatWelcome" class="chat-welcome">
+
+                <div class="chat-welcome-icon">
+                    <i class="fa-regular fa-comments"></i>
+                </div>
+
+                <h2>Your conversations</h2>
+
+                <p>
+                    Select a connection from the left to start chatting.
+                </p>
+
+            </div>
+
+
+            <!-- ACTIVE CHAT -->
+
+            <div id="activeChat" class="active-chat">
+
+                <div class="chat-header">
+
+                    <div class="chat-person">
+
+                        <div class="chat-avatar">
+
+                            <img
+                                id="chatHeaderImage"
+                                src=""
+                                alt="Profile"
+                            >
+
+                            <span class="online-dot"></span>
+
+                        </div>
+
+                        <div>
+
+                            <h3 id="chatHeaderName">
+                                Select a profile
+                            </h3>
+
+                            <p id="chatHeaderStatus">
+                                Online
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="chat-header-actions">
+
+                        <button
+                            type="button"
+                            title="View Profile"
+                            onclick="shaadiChatViewProfile()"
+                        >
+                            <i class="fa-regular fa-user"></i>
+                        </button>
+
+                        <button
+                            type="button"
+                            title="More"
+                        >
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="chatMessages"
+                    class="chat-messages"
+                ></div>
+
+
+                <div class="chat-input-area">
+
+                    <button
+                        type="button"
+                        class="chat-attach-btn"
+                        title="Attach"
+                    >
+                        <i class="fa-solid fa-paperclip"></i>
+                    </button>
+
+                    <input
+                        type="text"
+                        id="chatInput"
+                        placeholder="Write a message..."
+                        autocomplete="off"
+                    >
+
+                    <button
+                        type="button"
+                        class="chat-send-btn"
+                        onclick="shaadiChatSendMessage()"
+                    >
+                        <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+</main>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <div class="footer-about">
+
+            <div class="logo footer-logo">
+
+                <div class="logo-heart">♥</div>
+
+                <div>
+
+                    <h2>
+                        Shaadi<span>Match</span>
+                    </h2>
+
+                    <small>
+                        Find • Connect • Forever
+                    </small>
+
+                </div>
+
+            </div>
+
+            <p>
+                A trusted platform designed to help people
+                discover meaningful connections and begin
+                their journey towards forever.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+
+            <a href="profiles.html">Find Matches</a>
+
+            <a href="matches.html">Matches</a>
+
+            <a href="about.html">About Us</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Support</h3>
+
+            <a href="contact.html">Contact Us</a>
+
+            <a href="#">Privacy Policy</a>
+
+            <a href="#">Terms & Conditions</a>
+
+            <a href="#">Safety Tips</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Connect With Us</h3>
+
+            <p>📧 support@shaadimatch.com</p>
+
+            <p>📞 +91 98765 43210</p>
+
+            <div class="social-icons">
+
+                <span>f</span>
+                <span>𝕏</span>
+                <span>◎</span>
+                <span>in</span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>
+            © 2026 ShaadiMatch. All Rights Reserved.
+        </p>
+
+        <p>
+            Made with ♥ for meaningful connections.
+        </p>
+
+    </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>

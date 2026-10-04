@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Profile Details | ShaadiMatch</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="profile-detail-page">
+
+    <!-- =====================================================
+         NAVBAR
+         ===================================================== -->
+
+    <nav class="navbar">
+
+        <a href="index.html" class="logo">
+
+            <div class="logo-heart">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div>
+                <h2>Shaadi<span>Match</span></h2>
+                <small>Find Your Forever</small>
+            </div>
+
+        </a>
+
+
+        <div class="nav-links">
+
+            <a href="index.html">Home</a>
+
+            <a href="profiles.html" class="active">
+                Find Matches
+            </a>
+
+            <a href="matches.html">
+                Matches
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+            <a href="contact.html">
+                Contact Us
+            </a>
+
+        </div>
+
+
+        <div class="nav-actions">
+
+            <a href="login.html" class="login-btn">
+                Login
+            </a>
+
+            <a href="register.html" class="register-btn">
+                Register
+            </a>
+
+        </div>
+
+
+        <button class="menu-btn" type="button">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+    </nav>
+
+
+    <!-- =====================================================
+         MAIN
+         ===================================================== -->
+
+    <main class="profile-detail-main">
+
+        <!-- BACK -->
+        <a href="profiles.html" class="back-profile">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Profiles
+        </a>
+
+
+        <!-- =================================================
+             PROFILE HERO CARD
+             ================================================= -->
+
+        <section class="profile-hero-card">
+
+            <!-- IMAGE -->
+            <div class="profile-main-image">
+
+                <img
+                    id="detailImage"
+                    src=""
+                    alt="Profile photo">
+
+                <div class="verified-badge">
+                    <i class="fa-solid fa-circle-check"></i>
+                    Verified Profile
+                </div>
+
+            </div>
+
+
+            <!-- INFORMATION -->
+            <div class="profile-main-info">
+
+                <div class="profile-heading-row">
+
+                    <div>
+
+                        <span class="profile-label">
+                            VERIFIED PROFILE
+                        </span>
+
+                        <h1 id="detailName">
+                            Profile Name
+                        </h1>
+
+                        <p id="detailBasic" class="profile-basic">
+                            28 years • Jamshedpur
+                        </p>
+
+                    </div>
+
+
+                    <button
+                        type="button"
+                        class="detail-heart-btn"
+                        id="detailShortlistBtn"
+                        onclick="toggleDetailShortlist()">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+                </div>
+
+
+                <!-- QUICK INFO -->
+
+                <div class="profile-quick-info">
+
+                    <div>
+                        <i class="fa-solid fa-graduation-cap"></i>
+
+                        <span id="detailEducation">
+                            Engineering
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <i class="fa-solid fa-briefcase"></i>
+
+                        <span id="detailOccupation">
+                            Software Engineer
+                        </span>
+                    </div>
+
+
+                    <div>
+                        <i class="fa-solid fa-location-dot"></i>
+
+                        <span id="detailLocation">
+                            Jamshedpur
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <!-- BIO -->
+
+                <p id="detailBio" class="profile-bio">
+                    A software professional who enjoys technology,
+                    travelling and spending quality time with family.
+                </p>
+
+
+                <!-- ACTIONS -->
+
+                <div class="profile-actions">
+
+                    <button
+                        type="button"
+                        class="interest-btn"
+                        onclick="sendDetailInterest()">
+
+                        <i class="fa-solid fa-heart"></i>
+                        Send Interest
+
+                    </button>
+
+
+                    <button
+                        type="button"
+                        class="message-btn"
+                        onclick="openDetailMessage()">
+
+                        <i class="fa-solid fa-comment"></i>
+                        Message
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             DETAILS GRID
+             ================================================= -->
+
+        <section class="profile-information-section">
+
+            <div class="detail-section-heading">
+
+                <span>PROFILE INFORMATION</span>
+
+                <h2>Get to Know Them</h2>
+
+            </div>
+
+
+            <div class="details-grid">
+
+
+                <!-- PERSONAL -->
+
+                <div class="details-card">
+
+                    <div class="details-card-title">
+
+                        <div class="details-icon">
+                            <i class="fa-solid fa-user"></i>
+                        </div>
+
+                        <div>
+                            <h3>Personal Details</h3>
+                            <p>Basic information</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="details-list">
+
+                        <div class="detail-row">
+
+                            <span>Age</span>
+
+                            <strong id="infoAge">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-row">
+
+                            <span>Gender</span>
+
+                            <strong id="infoGender">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-row">
+
+                            <span>Religion</span>
+
+                            <strong id="infoReligion">
+                                -
+                            </strong>
+
+                        </div>
+
+
+                        <div class="detail-row">
+
+                            <span>Caste</span>
+
+                            <strong id="infoCaste">
+                                -
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FAMILY -->
+
+                <div class="details-card">
+
+                    <div class="details-card-title">
+
+                        <div class="details-icon">
+                            <i class="fa-solid fa-people-roof"></i>
+                        </div>
+
+                        <div>
+                            <h3>Family Details</h3>
+                            <p>Family background</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="details-list">
+
+                        <div class="detail-row">
+                            <span>Family Type</span>
+                            <strong id="infoFamilyType">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Family Values</span>
+                            <strong id="infoFamilyValues">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Father</span>
+                            <strong id="infoFather">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Mother</span>
+                            <strong id="infoMother">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Siblings</span>
+                            <strong id="infoSiblings">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Family Location</span>
+                            <strong id="infoFamilyLocation">-</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- CAREER -->
+
+                <div class="details-card">
+
+                    <div class="details-card-title">
+
+                        <div class="details-icon">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+
+                        <div>
+                            <h3>Career Details</h3>
+                            <p>Education & profession</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="details-list">
+
+                        <div class="detail-row">
+                            <span>Education</span>
+                            <strong id="infoEducation">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>College</span>
+                            <strong id="infoCollege">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Occupation</span>
+                            <strong id="infoOccupation">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Annual Income</span>
+                            <strong id="infoIncome">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Working Location</span>
+                            <strong id="infoWorkingLocation">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Employer</span>
+                            <strong id="infoEmployer">-</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PARTNER PREFERENCES -->
+
+                <div class="details-card">
+
+                    <div class="details-card-title">
+
+                        <div class="details-icon">
+                            <i class="fa-solid fa-heart"></i>
+                        </div>
+
+                        <div>
+                            <h3>Partner Preferences</h3>
+                            <p>Looking for</p>
+                        </div>
+
+                    </div>
+
+
+                    <div class="details-list">
+
+                        <div class="detail-row">
+                            <span>Preferred Age</span>
+                            <strong id="infoPreferredAge">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Religion</span>
+                            <strong id="infoPreferredReligion">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Caste</span>
+                            <strong id="infoPreferredCaste">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Education</span>
+                            <strong id="infoPreferredEducation">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Occupation</span>
+                            <strong id="infoPreferredOccupation">-</strong>
+                        </div>
+
+                        <div class="detail-row">
+                            <span>Location</span>
+                            <strong id="infoPreferredLocation">-</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             HOROSCOPE / COMPATIBILITY
+             ================================================= -->
+
+        <section class="compatibility-section">
+
+            <div class="compatibility-content">
+
+                <div class="compatibility-icon">
+                    <i class="fa-solid fa-star"></i>
+                </div>
+
+                <div>
+
+                    <span>COMPATIBILITY</span>
+
+                    <h2>
+                        Horoscope & Compatibility
+                    </h2>
+
+                    <p>
+                        Explore the compatibility score based on
+                        the profile information available.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="compatibility-score">
+
+                <div class="score-circle">
+
+                    <strong id="compatibilityScore">
+                        85%
+                    </strong>
+
+                    <span>Match</span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =================================================
+             BOTTOM CTA
+             ================================================= -->
+
+        <section class="profile-bottom-cta">
+
+            <div>
+
+                <span>LIKE THIS PROFILE?</span>
+
+                <h2>
+                    Take the First Step
+                </h2>
+
+                <p>
+                    Send an interest and let them know you'd like
+                    to connect.
+                </p>
+
+            </div>
+
+
+            <button
+                type="button"
+                onclick="sendDetailInterest()">
+
+                <i class="fa-solid fa-heart"></i>
+                Send Interest
+
+            </button>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <div class="footer-about">
+
+            <div class="logo footer-logo">
+
+                <div class="logo-heart">♥</div>
+
+                <div>
+                    <h2>Shaadi<span>Match</span></h2>
+                    <small>Find • Connect • Forever</small>
+                </div>
+
+            </div>
+
+            <p>
+                A trusted platform designed to help people
+                discover meaningful connections and begin
+                their journey towards forever.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="profiles.html">Find Matches</a>
+            <a href="matches.html">Matches</a>
+            <a href="about.html">About Us</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Support</h3>
+
+            <a href="contact.html">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Safety Tips</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Connect With Us</h3>
+
+            <p>📧 support@shaadimatch.com</p>
+            <p>📞 +91 98765 43210</p>
+
+            <div class="social-icons">
+                <span>f</span>
+                <span>𝕏</span>
+                <span>◎</span>
+                <span>in</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>© 2026 ShaadiMatch. All Rights Reserved.</p>
+
+        <p>Made with ♥ for meaningful connections.</p>
+
+    </div>
+
+</footer>
+
+
+    <!-- MAIN JS -->
+    <script src="script.js"></script>
+
+</body>
+</html>

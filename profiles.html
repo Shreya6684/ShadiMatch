@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Find Matches - ShaadiMatch</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="navbar">
+        <a href="index.html" class="logo">
+            <div class="logo-heart">♥</div>
+            <div>
+                <h2>Shaadi<span>Match</span></h2>
+                <small>Find • Connect • Forever</small>
+            </div>
+        </a>
+
+        <nav class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="profiles.html" class="active">Find Matches</a>
+            <a href="matches.html">Matches</a>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+
+        <div class="nav-actions">
+            <a href="dashboard.html" class="login-btn">My Dashboard</a>
+        </div>
+
+        <button class="menu-btn" id="menuBtn" type="button" aria-label="Toggle navigation">☰</button>
+    </header>
+
+
+    <!-- PAGE HERO -->
+    <section class="profiles-hero">
+
+        <div class="container">
+
+            <span class="section-tag">FIND YOUR MATCH</span>
+
+            <h1>Discover Meaningful Connections</h1>
+
+            <p>
+                Search and explore profiles based on your preferences.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SEARCH & FILTERS -->
+    <section class="profiles-section">
+
+        <div class="container">
+
+            <div class="profile-search-box">
+
+                <div class="search-main">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="profileSearch"
+                        placeholder="Search by name, location or profession..."
+                    >
+
+                </div>
+
+
+                <button class="filter-toggle" onclick="toggleProfileFilters()">
+                    <i class="fa-solid fa-sliders"></i>
+                    Filters
+                </button>
+
+            </div>
+
+
+            <!-- FILTER PANEL -->
+            <div class="profile-filter-panel" id="profileFilterPanel">
+
+                <div class="filter-group">
+
+                    <label>Age From</label>
+
+                    <input
+                        type="number"
+                        id="ageFrom"
+                        placeholder="18"
+                        min="18"
+                        max="70"
+                    >
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label>Age To</label>
+
+                    <input
+                        type="number"
+                        id="ageTo"
+                        placeholder="50"
+                        min="18"
+                        max="70"
+                    >
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label>Religion</label>
+
+                    <select id="religionFilter">
+
+                        <option value="">All Religions</option>
+                        <option value="Hindu">Hindu</option>
+                        <option value="Muslim">Muslim</option>
+                        <option value="Christian">Christian</option>
+                        <option value="Sikh">Sikh</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label>Caste</label>
+
+                    <select id="casteFilter">
+
+                        <option value="">All Castes</option>
+                        <option value="Brahmin">Brahmin</option>
+                        <option value="Rajput">Rajput</option>
+                        <option value="Kayastha">Kayastha</option>
+                        <option value="Agarwal">Agarwal</option>
+                        <option value="Other">Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label>Education</label>
+
+                    <select id="educationFilter">
+
+                        <option value="">All Education</option>
+                        <option value="Engineering">Engineering</option>
+                        <option value="Management">Management</option>
+                        <option value="Medical">Medical</option>
+                        <option value="Commerce">Commerce</option>
+                        <option value="Arts">Arts</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-group">
+
+                    <label>Location</label>
+
+                    <select id="locationFilter">
+
+                        <option value="">All Locations</option>
+                        <option value="Jamshedpur">Jamshedpur</option>
+                        <option value="Ranchi">Ranchi</option>
+                        <option value="Kolkata">Kolkata</option>
+                        <option value="Delhi">Delhi</option>
+                        <option value="Bengaluru">Bengaluru</option>
+
+                    </select>
+
+                </div>
+
+
+                <button class="clear-filter-btn" onclick="clearProfileFilters()">
+                    Clear Filters
+                </button>
+
+            </div>
+
+
+            <!-- RESULT TOP -->
+            <div class="profiles-toolbar">
+
+                <div>
+                    <h2>Recommended Profiles</h2>
+
+                    <p>
+                        <span id="profileCount">0</span> profiles found
+                    </p>
+                </div>
+
+
+                <div class="view-buttons">
+
+                    <button
+                        id="gridViewBtn"
+                        class="view-btn active"
+                        onclick="setProfileView('grid')">
+
+                        <i class="fa-solid fa-grip"></i>
+
+                    </button>
+
+
+                    <button
+                        id="listViewBtn"
+                        class="view-btn"
+                        onclick="setProfileView('list')">
+
+                        <i class="fa-solid fa-list"></i>
+
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROFILE CARDS -->
+            <div id="profilesGrid" class="profiles-grid"></div>
+
+
+            <!-- NO RESULT -->
+            <div id="noProfiles" class="no-profiles">
+
+                <i class="fa-regular fa-face-frown"></i>
+
+                <h3>No profiles found</h3>
+
+                <p>
+                    Try changing your search or filters.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <div class="footer-about">
+
+            <div class="logo footer-logo">
+
+                <div class="logo-heart">♥</div>
+
+                <div>
+                    <h2>Shaadi<span>Match</span></h2>
+                    <small>Find • Connect • Forever</small>
+                </div>
+
+            </div>
+
+            <p>
+                A trusted platform designed to help people
+                discover meaningful connections and begin
+                their journey towards forever.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="profiles.html">Find Matches</a>
+            <a href="matches.html">Matches</a>
+            <a href="about.html">About Us</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Support</h3>
+
+            <a href="contact.html">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Safety Tips</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Connect With Us</h3>
+
+            <p>📧 support@shaadimatch.com</p>
+            <p>📞 +91 98765 43210</p>
+
+            <div class="social-icons">
+                <span>f</span>
+                <span>𝕏</span>
+                <span>◎</span>
+                <span>in</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>© 2026 ShaadiMatch. All Rights Reserved.</p>
+
+        <p>Made with ♥ for meaningful connections.</p>
+
+    </div>
+
+</footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

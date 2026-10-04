@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login | ShaadiMatch</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- IMPORTANT: CSS IS IN ROOT FOLDER -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body class="login-page-body">
+
+
+    <!-- =====================================================
+         TOP NAVBAR
+         ===================================================== -->
+
+    <header class="login-header">
+
+        <a href="index.html" class="login-logo">
+
+            <div class="login-logo-heart">
+                <i class="fa-solid fa-heart"></i>
+            </div>
+
+            <div class="login-logo-text">
+                <h2>Shaadi<span>Match</span></h2>
+                <small>Find • Connect • Forever</small>
+            </div>
+
+        </a>
+
+
+        <div class="login-header-right">
+
+            <span>Don't have an account?</span>
+
+            <a href="register.html">
+                Create Profile
+            </a>
+
+        </div>
+
+    </header>
+
+
+    <!-- =====================================================
+         LOGIN MAIN
+         ===================================================== -->
+
+    <main class="login-main">
+
+
+        <!-- LEFT SIDE -->
+
+        <section class="login-intro">
+
+            <span class="login-kicker">
+                WELCOME BACK
+            </span>
+
+            <h1>
+                Your journey to
+                <br>
+                forever continues.
+            </h1>
+
+            <p>
+                Sign in to discover your matches, connect with
+                people and continue your journey towards a
+                meaningful relationship.
+            </p>
+
+
+            <div class="login-benefits">
+
+                <div>
+
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                    <p>Your profile is saved securely</p>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                    <p>Discover compatible matches</p>
+
+                </div>
+
+
+                <div>
+
+                    <span>
+                        <i class="fa-solid fa-check"></i>
+                    </span>
+
+                    <p>Connect with meaningful people</p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- RIGHT SIDE LOGIN CARD -->
+
+        <section class="login-form-area">
+
+            <div class="login-card">
+
+
+                <div class="login-card-header">
+
+                    <span>
+                        WELCOME TO SHAADIMATCH
+                    </span>
+
+                    <h2>
+                        Sign In
+                    </h2>
+
+                    <p>
+                        Enter your details to continue.
+                    </p>
+
+                </div>
+
+
+                <!-- LOGIN FORM -->
+
+                <form id="loginForm">
+
+
+                    <!-- EMAIL -->
+
+                    <div class="login-field">
+
+                        <label for="loginEmail">
+                            Email Address
+                        </label>
+
+                        <div class="login-input-box">
+
+                            <i class="fa-regular fa-envelope"></i>
+
+                            <input
+                                type="email"
+                                id="loginEmail"
+                                placeholder="Enter your email"
+                                autocomplete="email"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- PASSWORD -->
+
+                    <div class="login-field">
+
+                        <label for="loginPassword">
+                            Password
+                        </label>
+
+                        <div class="login-input-box password-input">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            <input
+                                type="password"
+                                id="loginPassword"
+                                placeholder="Enter your password"
+                                autocomplete="current-password"
+                                required>
+
+                            <button
+                                type="button"
+                                class="password-toggle"
+                                onclick="togglePassword()"
+                                aria-label="Show password">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- OPTIONS -->
+
+                    <div class="login-options">
+
+                        <label class="remember-option">
+
+                            <input
+                                type="checkbox"
+                                id="rememberMe">
+
+                            <span>
+                                Remember me
+                            </span>
+
+                        </label>
+
+
+                        <a
+                            href="#"
+                            onclick="forgotPassword(event)">
+
+                            Forgot password?
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- LOGIN BUTTON -->
+
+                    <button
+                        type="submit"
+                        class="login-submit">
+
+                        Sign In
+
+                        <i class="fa-solid fa-arrow-right"></i>
+
+                    </button>
+
+
+                </form>
+
+
+                <!-- DIVIDER -->
+
+                <div class="login-divider">
+
+                    <span>OR</span>
+
+                </div>
+
+
+                <!-- REGISTER -->
+
+                <div class="login-register">
+
+                    <p>
+                        Don't have a ShaadiMatch account?
+                    </p>
+
+                    <a href="register.html">
+                        Create your profile
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+         ===================================================== -->
+
+    <footer class="login-footer">
+
+        <p>
+            © 2026 ShaadiMatch. Find meaningful connections.
+        </p>
+
+    </footer>
+
+
+    <!-- IMPORTANT: JS IS IN ROOT FOLDER -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>

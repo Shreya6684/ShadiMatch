@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Create Your Profile | ShaadiMatch</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- IMPORTANT -->
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<header class="navbar">
+
+<a href="index.html" class="logo">
+    <div class="logo-heart">♥</div>
+
+    <div>
+        <h2>Shaadi<span>Match</span></h2>
+        <small>Find • Connect • Forever</small>
+    </div>
+</a>
+
+<nav class="nav-links">
+    <a href="index.html">Home</a>
+    <a href="profiles.html">Find Matches</a>
+    <a href="matches.html">Matches</a>
+    <a href="about.html">About Us</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<div class="nav-actions">
+    <a href="login.html" class="login-btn">Login</a>
+</div>
+
+</header>
+
+<!-- ================= REGISTER PAGE ================= -->
+
+<section class="register-page">
+
+<div class="register-intro">
+
+    <span>BEGIN YOUR JOURNEY</span>
+
+    <h1>Create Your<br><strong>ShaadiMatch</strong> Profile</h1>
+
+    <p>
+        Tell us a little about yourself so we can help you
+        discover meaningful and compatible connections.
+    </p>
+
+    <div class="register-benefits">
+
+        <div>
+            <span>✓</span>
+            <p>Discover compatible profiles</p>
+        </div>
+
+        <div>
+            <span>✓</span>
+            <p>Connect with genuine people</p>
+        </div>
+
+        <div>
+            <span>✓</span>
+            <p>Your information stays private</p>
+        </div>
+
+    </div>
+
+</div>
+
+
+<div class="register-card">
+
+    <div class="form-header">
+
+        <span>FREE REGISTRATION</span>
+
+        <h2>Create Your Profile</h2>
+
+        <p>Complete the steps below to get started.</p>
+
+    </div>
+
+
+    <!-- PROGRESS -->
+
+    <div class="form-progress">
+
+        <div class="progress-step active">
+            <span>1</span>
+            <small>Personal</small>
+        </div>
+
+        <div class="progress-line"></div>
+
+        <div class="progress-step">
+            <span>2</span>
+            <small>Family</small>
+        </div>
+
+        <div class="progress-line"></div>
+
+        <div class="progress-step">
+            <span>3</span>
+            <small>Career</small>
+        </div>
+
+        <div class="progress-line"></div>
+
+        <div class="progress-step">
+            <span>4</span>
+            <small>Preference</small>
+        </div>
+
+    </div>
+
+
+    <form id="registrationForm">
+
+
+        <!-- ================= STEP 1 ================= -->
+
+        <div class="form-step active" id="step1">
+
+            <h3>Personal Details</h3>
+
+            <p class="step-description">
+                Let's start with some basic information about you.
+            </p>
+
+
+            <div class="form-grid">
+
+                <div class="input-group full">
+
+                    <label>Full Name *</label>
+
+                    <input
+                        type="text"
+                        id="fullName"
+                        placeholder="Enter your full name"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Gender *</label>
+
+                    <select id="gender" required>
+
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Date of Birth *</label>
+
+                    <input
+                        type="date"
+                        id="dob"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Marital Status *</label>
+
+                    <select id="maritalStatus" required>
+
+                        <option value="">Select Status</option>
+                        <option>Never Married</option>
+                        <option>Divorced</option>
+                        <option>Widowed</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Mother Tongue *</label>
+
+                    <input
+                        type="text"
+                        id="motherTongue"
+                        placeholder="e.g. Hindi"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Religion *</label>
+
+                    <select id="religion" required>
+
+                        <option value="">Select Religion</option>
+                        <option>Hindu</option>
+                        <option>Muslim</option>
+                        <option>Christian</option>
+                        <option>Sikh</option>
+                        <option>Jain</option>
+                        <option>Buddhist</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Caste</label>
+
+                    <input
+                        type="text"
+                        id="caste"
+                        placeholder="Enter caste"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>City / Location *</label>
+
+                    <input
+                        type="text"
+                        id="location"
+                        placeholder="e.g. Jamshedpur"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+            <button type="button" class="next-btn" onclick="nextStep(1)">
+                Continue to Family Details →
+            </button>
+
+        </div>
+
+
+        <!-- ================= STEP 2 ================= -->
+
+        <div class="form-step" id="step2">
+
+            <h3>Family Details</h3>
+
+            <p class="step-description">
+                Help us understand your family background.
+            </p>
+
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label>Family Type *</label>
+
+                    <select id="familyType" required>
+
+                        <option value="">Select</option>
+                        <option>Nuclear Family</option>
+                        <option>Joint Family</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Family Values *</label>
+
+                    <select id="familyValues" required>
+
+                        <option value="">Select</option>
+                        <option>Traditional</option>
+                        <option>Moderate</option>
+                        <option>Liberal</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Father's Occupation</label>
+
+                    <input
+                        type="text"
+                        id="fatherOccupation"
+                        placeholder="Father's occupation"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Mother's Occupation</label>
+
+                    <input
+                        type="text"
+                        id="motherOccupation"
+                        placeholder="Mother's occupation"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Number of Siblings</label>
+
+                    <select id="siblings">
+
+                        <option>0</option>
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4+</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Family Location *</label>
+
+                    <input
+                        type="text"
+                        id="familyLocation"
+                        placeholder="Family city"
+                        required
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-buttons">
+
+                <button type="button" class="back-btn" onclick="previousStep(2)">
+                    ← Back
+                </button>
+
+                <button type="button" class="next-btn" onclick="nextStep(2)">
+                    Continue to Career →
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= STEP 3 ================= -->
+
+        <div class="form-step" id="step3">
+
+            <h3>Education & Career</h3>
+
+            <p class="step-description">
+                Tell us about your education and professional life.
+            </p>
+
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label>Highest Education *</label>
+
+                    <select id="education" required>
+
+                        <option value="">Select Education</option>
+                        <option>High School</option>
+                        <option>Graduate</option>
+                        <option>Post Graduate</option>
+                        <option>Doctorate</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>College / University</label>
+
+                    <input
+                        type="text"
+                        id="college"
+                        placeholder="College or university"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Occupation *</label>
+
+                    <input
+                        type="text"
+                        id="occupation"
+                        placeholder="e.g. Software Engineer"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Annual Income</label>
+
+                    <select id="income">
+
+                        <option value="">Select Income</option>
+                        <option>Below ₹5 Lakh</option>
+                        <option>₹5 - ₹10 Lakh</option>
+                        <option>₹10 - ₹20 Lakh</option>
+                        <option>₹20 - ₹30 Lakh</option>
+                        <option>₹30 Lakh+</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Working Location</label>
+
+                    <input
+                        type="text"
+                        id="workingLocation"
+                        placeholder="Work location"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Employer Name</label>
+
+                    <input
+                        type="text"
+                        id="employer"
+                        placeholder="Company / Organization"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <div class="form-buttons">
+
+                <button type="button" class="back-btn" onclick="previousStep(3)">
+                    ← Back
+                </button>
+
+                <button type="button" class="next-btn" onclick="nextStep(3)">
+                    Continue to Preferences →
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- ================= STEP 4 ================= -->
+
+        <div class="form-step" id="step4">
+
+            <h3>Partner Preferences</h3>
+
+            <p class="step-description">
+                Tell us what you are looking for in a partner.
+            </p>
+
+
+            <div class="form-grid">
+
+                <div class="input-group">
+
+                    <label>Preferred Age Range *</label>
+
+                    <select id="preferredAge" required>
+
+                        <option value="">Select Range</option>
+                        <option>18 - 25</option>
+                        <option>26 - 30</option>
+                        <option>31 - 35</option>
+                        <option>36 - 40</option>
+                        <option>41+</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Preferred Religion</label>
+
+                    <select id="preferredReligion">
+
+                        <option value="">Any Religion</option>
+                        <option>Hindu</option>
+                        <option>Muslim</option>
+                        <option>Christian</option>
+                        <option>Sikh</option>
+                        <option>Jain</option>
+                        <option>Other</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Preferred Caste</label>
+
+                    <input
+                        type="text"
+                        id="preferredCaste"
+                        placeholder="Any / Specific caste"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Preferred Education</label>
+
+                    <select id="preferredEducation">
+
+                        <option value="">Any Education</option>
+                        <option>Graduate</option>
+                        <option>Post Graduate</option>
+                        <option>Doctorate</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Preferred Occupation</label>
+
+                    <input
+                        type="text"
+                        id="preferredOccupation"
+                        placeholder="Any occupation"
+                    >
+
+                </div>
+
+
+                <div class="input-group">
+
+                    <label>Preferred Location</label>
+
+                    <input
+                        type="text"
+                        id="preferredLocation"
+                        placeholder="Any city / state"
+                    >
+
+                </div>
+
+            </div>
+
+
+            <label class="terms-check">
+
+                <input type="checkbox" id="terms" required>
+
+                <span>
+                    I agree to the ShaadiMatch Terms & Conditions
+                    and Privacy Policy.
+                </span>
+
+            </label>
+
+
+            <div class="form-buttons">
+
+                <button type="button" class="back-btn" onclick="previousStep(4)">
+                    ← Back
+                </button>
+
+                <button type="submit" class="create-btn">
+                    ♥ Create My Profile
+                </button>
+
+            </div>
+
+        </div>
+
+    </form>
+
+</div>
+
+</section>
+
+<script src="script.js"></script>
+
+</body>
+</html>

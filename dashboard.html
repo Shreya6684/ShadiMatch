@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - ShaadiMatch</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-page">
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="dashboard-header">
+
+        <a href="index.html" class="dashboard-logo">
+            <div class="dashboard-logo-heart">♥</div>
+
+            <div>
+                <h2>Shaadi<span>Match</span></h2>
+                <small>Find • Connect • Forever</small>
+            </div>
+        </a>
+
+        <div class="dashboard-header-right">
+
+            <a href="messages.html" class="header-message-btn">
+                <i class="fa-regular fa-comment-dots"></i>
+            </a>
+
+            <div class="dashboard-user-mini">
+                <div class="mini-avatar" id="headerAvatar">S</div>
+
+                <div>
+                    <strong id="headerUserName">My Profile</strong>
+                    <small>Member</small>
+                </div>
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- ================= DASHBOARD LAYOUT ================= -->
+
+    <div class="dashboard-layout">
+
+        <!-- SIDEBAR -->
+
+        <aside class="dashboard-sidebar">
+
+            <div class="sidebar-profile">
+
+                <div class="sidebar-avatar" id="sidebarAvatar">
+                    S
+                </div>
+
+                <h3 id="sidebarUserName">
+                    My Profile
+                </h3>
+
+                <p>
+                    <i class="fa-solid fa-circle-check"></i>
+                    Profile Active
+                </p>
+
+            </div>
+
+
+            <nav class="dashboard-nav">
+
+                <a href="dashboard.html" class="active">
+                    <i class="fa-solid fa-house"></i>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="profiles.html">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <span>Find Matches</span>
+                </a>
+
+                <a href="matches.html">
+                    <i class="fa-solid fa-heart"></i>
+                    <span>My Matches</span>
+                </a>
+
+                <a href="messages.html">
+                    <i class="fa-regular fa-message"></i>
+                    <span>Messages</span>
+                </a>
+
+                <a href="matches.html?tab=shortlisted">
+                    <i class="fa-regular fa-star"></i>
+                    <span>Shortlisted</span>
+                </a>
+
+                <a href="register.html">
+                    <i class="fa-solid fa-user-pen"></i>
+                    <span>Edit Profile</span>
+                </a>
+
+            </nav>
+
+
+            <div class="sidebar-bottom">
+
+                <a href="about.html">
+                    <i class="fa-solid fa-circle-info"></i>
+                    About Us
+                </a>
+
+                <button onclick="logoutUser()" class="sidebar-logout">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    Logout
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN ================= -->
+
+        <main class="dashboard-main">
+
+            <!-- WELCOME -->
+
+            <section class="dashboard-welcome">
+
+                <div>
+
+                    <span class="dashboard-tag">
+                        WELCOME BACK
+                    </span>
+
+                    <h1>
+                        Hello, <span id="welcomeUserName">there</span>! 👋
+                    </h1>
+
+                    <p>
+                        Here's what's happening with your ShaadiMatch profile today.
+                    </p>
+
+                </div>
+
+                <a href="profiles.html" class="dashboard-find-btn">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    Find Matches
+                </a>
+
+            </section>
+
+
+            <!-- ================= STATS ================= -->
+
+            <section class="dashboard-stats">
+
+                <div class="dashboard-stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-regular fa-eye"></i>
+                    </div>
+
+                    <div>
+                        <span>Profile Views</span>
+                        <strong id="profileViews">128</strong>
+                        <small>
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            This month
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-regular fa-heart"></i>
+                    </div>
+
+                    <div>
+                        <span>Interests Received</span>
+                        <strong id="interestsReceived">12</strong>
+                        <small>
+                            <i class="fa-solid fa-arrow-trend-up"></i>
+                            New interests
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-solid fa-heart-circle-check"></i>
+                    </div>
+
+                    <div>
+                        <span>My Matches</span>
+                        <strong id="matchCount">0</strong>
+                        <small>
+                            Mutual connections
+                        </small>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-stat-card">
+
+                    <div class="stat-icon">
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+
+                    <div>
+                        <span>Shortlisted</span>
+                        <strong id="shortlistCount">0</strong>
+                        <small>
+                            Saved profiles
+                        </small>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= TWO COLUMN ================= -->
+
+            <section class="dashboard-content-grid">
+
+
+                <!-- PROFILE CARD -->
+
+                <div class="dashboard-panel profile-overview-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <span class="panel-label">
+                                YOUR PROFILE
+                            </span>
+
+                            <h2>Profile Overview</h2>
+                        </div>
+
+                        <a href="register.html">
+                            Edit
+                        </a>
+
+                    </div>
+
+
+                    <div class="profile-overview">
+
+                        <div class="large-profile-avatar" id="profileAvatar">
+                            S
+                        </div>
+
+                        <div class="profile-overview-info">
+
+                            <h3 id="profileName">
+                                Your Name
+                            </h3>
+
+                            <p id="profileLocation">
+                                <i class="fa-solid fa-location-dot"></i>
+                                Location
+                            </p>
+
+                            <p id="profileOccupation">
+                                <i class="fa-solid fa-briefcase"></i>
+                                Occupation
+                            </p>
+
+                            <p id="profileEducation">
+                                <i class="fa-solid fa-graduation-cap"></i>
+                                Education
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="profile-progress">
+
+                        <div class="progress-heading">
+                            <span>Profile Completion</span>
+                            <strong id="profileCompletion">
+                                85%
+                            </strong>
+                        </div>
+
+                        <div class="progress-bar">
+                            <span id="profileProgressBar"></span>
+                        </div>
+
+                        <p>
+                            Complete your profile to get better matches.
+                        </p>
+
+                    </div>
+
+
+                    <a href="register.html" class="complete-profile-btn">
+                        Complete Profile
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <!-- QUICK ACTIONS -->
+
+                <div class="dashboard-panel quick-actions-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+                            <span class="panel-label">
+                                QUICK ACCESS
+                            </span>
+
+                            <h2>Quick Actions</h2>
+                        </div>
+
+                    </div>
+
+
+                    <div class="quick-actions">
+
+                        <a href="profiles.html" class="quick-action">
+
+                            <div>
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+
+                            <span>
+                                Find Matches
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <a href="matches.html" class="quick-action">
+
+                            <div>
+                                <i class="fa-regular fa-heart"></i>
+                            </div>
+
+                            <span>
+                                View Matches
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <a href="messages.html" class="quick-action">
+
+                            <div>
+                                <i class="fa-regular fa-message"></i>
+                            </div>
+
+                            <span>
+                                Messages
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+
+                        <a href="matches.html?tab=shortlisted" class="quick-action">
+
+                            <div>
+                                <i class="fa-regular fa-star"></i>
+                            </div>
+
+                            <span>
+                                Shortlisted
+                            </span>
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= RECOMMENDED ================= -->
+
+            <section class="dashboard-panel recommended-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <span class="panel-label">
+                            FOR YOU
+                        </span>
+
+                        <h2>Recommended Matches</h2>
+
+                        <p>
+                            Profiles you may be interested in.
+                        </p>
+                    </div>
+
+                    <a href="profiles.html" class="view-all-link">
+                        View All
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+
+                </div>
+
+
+                <div
+                    class="dashboard-recommended-grid"
+                    id="dashboardRecommendedProfiles">
+                </div>
+
+            </section>
+
+
+            <!-- ================= ACTIVITY ================= -->
+
+            <section class="dashboard-panel activity-panel">
+
+                <div class="panel-heading">
+
+                    <div>
+                        <span class="panel-label">
+                            RECENT
+                        </span>
+
+                        <h2>Recent Activity</h2>
+                    </div>
+
+                </div>
+
+
+                <div class="dashboard-activity-list">
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            <i class="fa-regular fa-heart"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                New interest received
+                            </strong>
+
+                            <p>
+                                Someone showed interest in your profile.
+                            </p>
+                        </div>
+
+                        <span>
+                            Today
+                        </span>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            <i class="fa-regular fa-eye"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Your profile was viewed
+                            </strong>
+
+                            <p>
+                                Your profile received new views.
+                            </p>
+                        </div>
+
+                        <span>
+                            Yesterday
+                        </span>
+
+                    </div>
+
+
+                    <div class="activity-item">
+
+                        <div class="activity-icon">
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+
+                        <div>
+                            <strong>
+                                Profile shortlisted
+                            </strong>
+
+                            <p>
+                                A profile was added to your shortlist.
+                            </p>
+                        </div>
+
+                        <span>
+                            2 days ago
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+    </div>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="dashboard-footer">
+        <p>
+            © 2026 ShaadiMatch. All Rights Reserved.
+        </p>
+
+        <p>
+            Made with ♥ for meaningful connections.
+        </p>
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

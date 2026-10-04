@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>My Matches - ShaadiMatch</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    >
+</head>
+
+<body>
+
+    <!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <a href="index.html" class="logo">
+
+        <div class="logo-heart">
+            ♥
+        </div>
+
+        <div>
+            <h2>
+                Shaadi<span>Match</span>
+            </h2>
+
+            <small>
+                Find • Connect • Forever
+            </small>
+        </div>
+
+    </a>
+
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="profiles.html">
+            Find Matches
+        </a>
+
+        <a href="matches.html" class="active">
+            Matches
+        </a>
+
+        <a href="about.html">
+            About Us
+        </a>
+
+        <a href="contact.html">
+            Contact Us
+        </a>
+
+    </nav>
+
+
+    <div class="nav-actions">
+
+        <a href="dashboard.html" class="login-btn">
+            My Dashboard
+        </a>
+
+    </div>
+
+</header>
+
+    <!-- PAGE HERO -->
+    <section class="matches-hero">
+
+        <div class="container">
+
+            <span class="section-tag">YOUR CONNECTIONS</span>
+
+            <h1>My Matches</h1>
+
+            <p>
+                Manage your interests, matches and shortlisted profiles.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MATCHES CONTENT -->
+    <main class="matches-page">
+
+        <div class="container">
+
+            <!-- TABS -->
+            <div class="matches-tabs">
+
+                <button
+                    class="match-tab active"
+                    data-tab="mutual"
+                >
+                    <i class="fa-solid fa-heart"></i>
+                    Mutual Matches
+                </button>
+
+                <button
+                    class="match-tab"
+                    data-tab="sent"
+                >
+                    <i class="fa-solid fa-paper-plane"></i>
+                    Sent Interests
+                </button>
+
+                <button
+                    class="match-tab"
+                    data-tab="shortlisted"
+                >
+                    <i class="fa-solid fa-bookmark"></i>
+                    Shortlisted
+                </button>
+
+            </div>
+
+
+            <!-- MUTUAL MATCHES -->
+            <section
+                id="mutualSection"
+                class="match-section active"
+            >
+
+                <div class="match-section-heading">
+
+                    <div>
+                        <h2>Mutual Matches</h2>
+
+                        <p>
+                            Profiles where interest has been mutually expressed.
+                        </p>
+                    </div>
+
+                    <span id="mutualCount" class="match-count">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="mutualMatchesGrid"
+                    class="matches-grid"
+                ></div>
+
+            </section>
+
+
+            <!-- SENT INTERESTS -->
+            <section
+                id="sentSection"
+                class="match-section"
+            >
+
+                <div class="match-section-heading">
+
+                    <div>
+                        <h2>Sent Interests</h2>
+
+                        <p>
+                            Profiles you have shown interest in.
+                        </p>
+                    </div>
+
+                    <span id="sentCount" class="match-count">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="sentInterestsGrid"
+                    class="matches-grid"
+                ></div>
+
+            </section>
+
+
+            <!-- SHORTLISTED -->
+            <section
+                id="shortlistedSection"
+                class="match-section"
+            >
+
+                <div class="match-section-heading">
+
+                    <div>
+                        <h2>Shortlisted Profiles</h2>
+
+                        <p>
+                            Profiles you saved for later.
+                        </p>
+                    </div>
+
+                    <span id="shortlistedCount" class="match-count">
+                        0
+                    </span>
+
+                </div>
+
+
+                <div
+                    id="shortlistedProfilesGrid"
+                    class="matches-grid"
+                ></div>
+
+            </section>
+
+
+            <!-- EMPTY MESSAGE -->
+            <div
+                id="matchesEmptyState"
+                class="matches-empty-state"
+            >
+
+                <i class="fa-regular fa-heart"></i>
+
+                <h3>No profiles here yet</h3>
+
+                <p>
+                    Explore profiles and start building meaningful connections.
+                </p>
+
+                <a href="profiles.html" class="explore-matches-btn">
+                    Explore Profiles
+                </a>
+
+            </div>
+
+        </div>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-main">
+
+        <div class="footer-about">
+
+            <div class="logo footer-logo">
+
+                <div class="logo-heart">♥</div>
+
+                <div>
+                    <h2>Shaadi<span>Match</span></h2>
+                    <small>Find • Connect • Forever</small>
+                </div>
+
+            </div>
+
+            <p>
+                A trusted platform designed to help people
+                discover meaningful connections and begin
+                their journey towards forever.
+            </p>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Quick Links</h3>
+
+            <a href="index.html">Home</a>
+            <a href="profiles.html">Find Matches</a>
+            <a href="matches.html">Matches</a>
+            <a href="about.html">About Us</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Support</h3>
+
+            <a href="contact.html">Contact Us</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Safety Tips</a>
+
+        </div>
+
+
+        <div class="footer-column">
+
+            <h3>Connect With Us</h3>
+
+            <p>📧 support@shaadimatch.com</p>
+            <p>📞 +91 98765 43210</p>
+
+            <div class="social-icons">
+                <span>f</span>
+                <span>𝕏</span>
+                <span>◎</span>
+                <span>in</span>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        <p>© 2026 ShaadiMatch. All Rights Reserved.</p>
+
+        <p>Made with ♥ for meaningful connections.</p>
+
+    </div>
+
+</footer>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
